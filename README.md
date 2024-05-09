@@ -1,6 +1,6 @@
 # SSM-DTA: Sequence-based Prediction of Drug-Target Binding Affinity<br><br><br>
 
-## Intro
+## Introduction
 
 This repository contains the code and resources for using **SSM-DTA**, a Deep learning model developed by QIZHI PEI et al. in this research paper: https://academic.oup.com/bib/article/24/6/bbad386/7333673?login=false.
 
