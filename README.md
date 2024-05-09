@@ -146,9 +146,9 @@ Once the processing is complete, the application will display the results.
 - If you performed evaluation, you will see the evaluation metrics such as MSE, RMSE, Pearson correlation, and C-index. Additionally, you will find a download link for the output file containing the predicted scores and a table comparing the true and predicted scores. 
 
 
-That's it! You can repeat the process with different input files or adjust the settings as needed.
+That's it! You can repeat the process with different input files or adjust the settings as needed. <br><br><br>
 
-## Overview of the code files
+## Overview of the code files 
 
 The SSM-DTA project consists of several Python files that work together to provide the functionality for drug-target binding affinity prediction. Here's an overview of each file:
 
