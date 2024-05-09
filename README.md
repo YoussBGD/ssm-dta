@@ -120,7 +120,7 @@ The SSM-DTA application provides a user-friendly web interface for predicting dr
 Choose the desired prediction mode from the "Select Mode" dropdown menu. There are two options:
 - "Prediction": Use this mode if you only want to predict the binding affinity scores for the given molecule-protein pairs.
 - "Evaluation": Use this mode if you have a labels file and want to evaluate the performance of the SSM-DTA model by comparing the predicted scores with the true scores.<br>
-                The repository **Benchmark/** Contains test sets from various databases (DAVIS, KIBA, BindingDB_IC50 and BIndingDB_KI) for benchmarking the SSM-DTA model.
+                The repository **Benchmark/** Contains test sets from DAVIS, KIBA, BindingDB_IC50 and BIndingDB_KI databases, you can use them directly for benchmarking the SSM-DTA model as they are alredy in the good format file.
 
 
 #### Select Model: 
