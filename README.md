@@ -7,8 +7,9 @@ This repository contains the code and resources for using **SSM-DTA**, a Deep le
 The provided code launches a user-friendly graphical interface built using **Streamlit**, an open-source app framework for Machine Learning and Data Science. This interface allows for easy prediction of drug-target activity scores (Ki, Kd, IC50, KIBA score) and also enables benchmarking the SSM-DTA model on labeled data. 
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
+## A- Getting Started <br><br>
 
-## A - Getting Started with docker<br><br>
+## Getting Started with docker<br><br>
 
 ### Prerequisites
 
@@ -42,7 +43,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 
 
-## B- Getting Started with conda<br><br>
+## Getting Started with conda<br><br>
 
 ### Prerequisites
 
