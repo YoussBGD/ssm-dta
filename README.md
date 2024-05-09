@@ -14,7 +14,7 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 - Docker installed on your system<br><br>
 
-### Running the Application<br><br>
+### Running the Application
 
 **1- Clone this repository:**
 
