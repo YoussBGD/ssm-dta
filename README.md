@@ -8,7 +8,7 @@ The provided code launches a user-friendly graphical interface built using **Str
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 
-## Getting Started with docker<br><br>
+## A - Getting Started with docker<br><br>
 
 ### Prerequisites
 
@@ -42,7 +42,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 
 
-## Getting Started with conda<br><br>
+## B- Getting Started with conda<br><br>
 
 ### Prerequisites
 
@@ -107,7 +107,7 @@ The scores can be one of the following:
 
 
 
-## How to Use the Interface
+## C- How to Use the Interface
 
 The SSM-DTA application provides a user-friendly web interface for predicting drug-target binding affinity. Here's a step-by-step guide on how to use the interface:
 
@@ -150,7 +150,7 @@ Once the processing is complete, the application will display the results.
 
 That's it! You can repeat the process with different input files or adjust the settings as needed. <br><br><br>
 
-## Overview of the code files 
+## D- Overview of the code files 
 
 The SSM-DTA project consists of several Python files that work together to provide the functionality for drug-target binding affinity prediction. Here's an overview of each file:
 
