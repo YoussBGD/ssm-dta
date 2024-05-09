@@ -4,7 +4,7 @@
 
 This repository contains the code and resources for using **SSM-DTA**, a Deep learning model developed by QIZHI PEI et al. in this research paper: https://academic.oup.com/bib/article/24/6/bbad386/7333673?login=false.
 
-The provided code launches a user-friendly graphical interface built using **Streamlit**, an open-source app framework for Machine Learning and Data Science. This interface allows for easy prediction of drug-target activity scores (Ki, Kd, IC50, KIBA score) and also enables benchmarking the SSM-DTA model on labeled data. 
+The provided code launches a user-friendly graphical interface built using **Streamlit**, an open-source app framework for Machine Learning and Data Science. This interface allows for easy prediction of drug-target activity scores (Ki, Kd, IC50, KIBA score) and also enables the evaluation and benchmarking the SSM-DTA model on labeled data. 
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 ## A- Getting Started <br><br>
