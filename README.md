@@ -8,11 +8,11 @@ The provided code launches a user-friendly graphical interface built using **Str
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 
-## Getting Started with docker
+## Getting Started with docker<br><br>
 
 ### Prerequisites
 
-- Docker installed on your system
+- Docker installed on your system<br><br>
 
 ### Running the Application<br><br>
 
@@ -42,11 +42,11 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 
 
-## Getting Started with conda
+## Getting Started with conda<br><br>
 
 ### Prerequisites
 
-- Conda installed on your system
+- Conda installed on your system<br><br>
 
 ### Running the Application
 
