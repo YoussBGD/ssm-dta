@@ -112,9 +112,9 @@ The scores can be one of the following:
 The SSM-DTA application provides a user-friendly web interface for predicting drug-target binding affinity. Here's a step-by-step guide on how to use the interface:
 
 #### Upload Input Files:
-- Click on the "Browse files" button next to "Upload Molecules File" to select and upload a file containing molecule SMILES strings. Each SMILES string should be on a separate line. (see example.mol)
-- Click on the "Browse files" button next to "Upload Proteins File" to select and upload a file containing protein sequences. Each protein sequence should be on a separate line (see example.pro).
-- If you want to perform evaluation, click on the "Browse files" button next to "Upload Labels File" to select and upload a file containing binding affinity scores (labels). Each score should be on a separate line and correspond to the molecule-protein pairs in the respective files (see example.label).
+- Click on the "Browse files" button next to "Upload Molecules File" to select and upload a file containing molecule SMILES strings. (see example.mol)
+- Click on the "Browse files" button next to "Upload Proteins File" to select and upload a file containing protein sequences. (see example.pro).
+- If you want to perform evaluation, click on the "Browse files" button next to "Upload Labels File" to select and upload a file containing binding affinity scores (labels). (see example.label).
 
 #### Select Prediction Mode:
 Choose the desired prediction mode from the "Select Mode" dropdown menu. There are two options:
