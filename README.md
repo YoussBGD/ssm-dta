@@ -90,9 +90,9 @@ The scores can be one of the following:
 - KI values: Inhibition constant, should be in nM and transformed using $-\log_{10}(\frac{Ki}{10^9})$.
 - IC50 values: Half maximal inhibitory concentration, should be in nM and transformed using $-\log_{10}(\frac{IC50}{10^9})$.
 - Kd values: Dissociation constant, should be in nM and transformed using $-\log_{10}(\frac{Kd}{10^9})$.
-- KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.<br><br><br><br>
+- KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.
 
-**** If you have sdf files or a CSV file with CIDs, protein sequences and affinity values, use the **formatfiles.py** code which will guide you and transform your data into the correct format. ****
+If you have sdf files or a CSV file with CIDs, protein sequences and affinity values, use the **formatfiles.py** code which will guide you and transform your data into the correct format. <br><br><br><br>
 
 
 ## C- How to Use the Interface
