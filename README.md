@@ -17,9 +17,9 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**, paste them in the **cloned directory ssm-dta** and unzip them **without changing their names**.
 
    - ckpt : https://drive.google.com/file/d/1bg2zBfAWx-fct8BRyEqznxqWexlI53-c/view?usp=drive_link<br>
-   - fairseq :  https://drive.google.com/file/d/1ImPyGGYzTBIS-iq7Lt2vZCx-PbZeu9nU/view?usp=drive_link<br><br>
+   - fairseq :  https://drive.google.com/file/d/1ImPyGGYzTBIS-iq7Lt2vZCx-PbZeu9nU/view?usp=drive_link<br><br><br>
 
-## To run the code with docker<br><br>
+### To run the code with docker<br><br>
 
 ### Prerequisites
 
@@ -42,7 +42,7 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
   **Before using the application, read the "Input Files Format" section.**<br><br><br><br>  
 
 
-## To run the code with conda<br><br>
+### To run the code with conda<br><br>
 
 ### Prerequisites
 
@@ -72,7 +72,7 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
 <br><br><br>
 
-### Input Files Format ( **** IMPORTANT ****)
+## B- Input Files Format ( **** IMPORTANT ****)
 
 To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
 
