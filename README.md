@@ -124,10 +124,10 @@ The SSM-DTA application provides a user-friendly web interface for predicting dr
 
 #### 3- Select Model: 
 -Choose the appropriate model from the "Model" dropdown menu based on the type of binding affinity scores you want to predict or evaluate. The available options are:
-- "DAVIS": Select this model if your labels are dissociation constant (Kd) values.
-- "KIBA ": Select this model if your labels are KIBA scores (an aggregation of IC50, Ki, and Kd measurements).
-- "BindingDB_IC50": Select this model if your labels are half maximal inhibitory concentration (IC50) values.
-- "BindingDB_Ki": Select this model if your labels are inhibition constant (Ki) values.
+- "DAVIS": Select this model if your want to predict dissociation constant (Kd) values.
+- "KIBA ": Select this model if your want to predict KIBA scores (an aggregation of IC50, Ki, and Kd measurements).
+- "BindingDB_IC50": Select this model if your want to predict half maximal inhibitory concentration (IC50) values.
+- "BindingDB_Ki": Select this model if your want to predict inhibition constant (Ki) values.
 
 #### 4- Specify Output File Name: 
 -Enter a name for the output file in the "Output File Name" text input field. This file will contain the predicted binding affinity scores.
