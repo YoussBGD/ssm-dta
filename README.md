@@ -4,10 +4,43 @@
 
 This repository contains the code and resources for using **SSM-DTA**, a Deep learning model developed by QIZHI PEI et al. in this research paper: https://academic.oup.com/bib/article/24/6/bbad386/7333673?login=false.
 
-The provided code launches a user-friendly graphical interface built using **Streamlit**, an open-source app framework for Machine Learning and Data Science. This interface allows for easy prediction of drug-target activity scores (Ki, Kd, IC50, KIBA score) and also enables the evaluation and benchmarking the SSM-DTA model on labeled data. 
+The provided code launches a user-friendly graphical interface built using **Streamlit**, an open-source app framework for Machine Learning and Data Science. This interface allows for easy **prediction** of drug-target activity scores (Ki, Kd, IC50, KIBA score) and also enables the **evaluation** and benchmarking the SSM-DTA model on labeled data. 
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
-## A- Getting Started <br><br>
+
+## A- Input Files Format ( **** IMPORTANT ****) read this efore using the application
+
+To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
+
+**examples/ :**  Contains example files demonstrating the required format for input data.
+
+- example.mol: Example file containing molecule SMILES strings, with each SMILES on a separate line.
+- example.pro: Example file containing protein sequences, with each sequence on a separate line.
+- example.label: Example file containing binding affinity scores (labels) of the protein-target interaction,  with each score on a separate line. <br>
+
+    
+**Labels file :**  The labels file is mandatory for evaluation mode. In prediction mode, only the molecule and protein files are required.
+
+The scores can be one of the following:
+
+- KI values: Inhibition constant, should be in nM and transformed using $-\log_{10}(\frac{Ki}{10^9})$.
+- IC50 values: Half maximal inhibitory concentration, should be in nM and transformed using $-\log_{10}(\frac{IC50}{10^9})$.
+- Kd values: Dissociation constant, should be in nM and transformed using $-\log_{10}(\frac{Kd}{10^9})$.
+- KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.
+
+If you possess SDF files or a CSV file containing CIDs, protein sequences, and affinity values, you can utilize the formatfiles.py script. This script will interactively guide you through the process and automatically convert your data into the appropriate format using the command provided below.
+
+    python formatfiles.py
+To run formatfiles.py you need the following libraries 
+- rdkit
+- pandas
+- numpy
+- pubchempy
+
+<br><br><br><br>
+
+
+## B- Getting Started <br><br>
 
 **1- Clone this repository:**
 
@@ -38,8 +71,7 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
     docker run ssm-dta 
 
-#### 4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal.
-  **Before using the application, read the "B- Input Files Format" section.**<br><br><br><br>  
+#### 4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal.<br><br><br><br>  
 
 
 ### To run the code with conda<br><br>
@@ -71,37 +103,6 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
 
 <br><br><br>
-
-## B- Input Files Format ( **** IMPORTANT ****)
-
-To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
-
-**examples/ :**  Contains example files demonstrating the required format for input data.
-
-- example.mol: Example file containing molecule SMILES strings, with each SMILES on a separate line.
-- example.pro: Example file containing protein sequences, with each sequence on a separate line.
-- example.label: Example file containing binding affinity scores (labels) of the protein-target interaction,  with each score on a separate line. <br>
-
-    
-**Labels file :**  The labels file is mandatory for evaluation mode. In prediction mode, only the molecule and protein files are required.
-
-The scores can be one of the following:
-
-- KI values: Inhibition constant, should be in nM and transformed using $-\log_{10}(\frac{Ki}{10^9})$.
-- IC50 values: Half maximal inhibitory concentration, should be in nM and transformed using $-\log_{10}(\frac{IC50}{10^9})$.
-- Kd values: Dissociation constant, should be in nM and transformed using $-\log_{10}(\frac{Kd}{10^9})$.
-- KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.
-
-If you possess SDF files or a CSV file containing CIDs, protein sequences, and affinity values, you can utilize the formatfiles.py script. This script will interactively guide you through the process and automatically convert your data into the appropriate format using the command provided below.
-
-    python formatfiles.py
-To run formatfiles.py you need the following libraries 
-- rdkit
-- pandas
-- numpy
-- pubchempy
-
-<br><br><br><br>
 
 
 ## C- How to Use the Interface
