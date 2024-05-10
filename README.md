@@ -9,15 +9,7 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 ## A- Getting Started <br><br>
 
-## Getting Started with docker<br><br>
-
-### Prerequisites
-
-- Docker installed on your system<br><br>
-
-### Running the Application
-
-**1- Clone this repository:**
+**Clone this repository:**
 
     git clone https://YoussBGD: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@github.com/YoussBGD/ssm-dta.git
 
@@ -27,58 +19,53 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
    - ckpt : https://drive.google.com/file/d/1bg2zBfAWx-fct8BRyEqznxqWexlI53-c/view?usp=drive_link<br>
    - fairseq :  https://drive.google.com/file/d/1ImPyGGYzTBIS-iq7Lt2vZCx-PbZeu9nU/view?usp=drive_link<br><br>
 
-**2- Navigate to the project directory:**
+## runing the code with docker<br><br>
+
+### Prerequisites
+
+- Docker installed on your system<br><br>
+
+
+**1- Navigate to the project directory:**
 
     cd ssm-dta
 
-**3- Build the Docker image:**
+**2- Build the Docker image:**
 
     docker build -t ssm-dta .
 
-**4- Run the Docker container:**
+**3- Run the Docker container:**
 
     docker run ssm-dta 
 
-#### 5- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal.<br><br><br><br>
+#### 4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal.<br><br><br><br>
 
 
 
-## Getting Started with conda<br><br>
+## Runing the with conda<br><br>
 
 ### Prerequisites
 
 - Conda installed on your system<br><br>
 
-### Running the Application
 
-**1- Clone this repository:**
-
-    git clone https://YoussBGD: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@github.com/YoussBGD/ssm-dta.git
-
-#### **** IMPORTANT ****
-
-from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste them in the **cloned directory ssm-dta** and unzip them without changing their names.
-
-- ckpt : https://drive.google.com/file/d/1bg2zBfAWx-fct8BRyEqznxqWexlI53-c/view?usp=drive_link <br>
-- fairseq :  https://drive.google.com/file/d/1ImPyGGYzTBIS-iq7Lt2vZCx-PbZeu9nU/view?usp=drive_link <br><br>
-
-**2- Navigate to the project directory:**
+**1- Navigate to the project directory:**
 
     cd ssm-dta
 
-**3- Create a new Conda environment:**
+**2- Create a new Conda environment:**
 
     conda create --name ssm-dta python=3.10 
 
-**4- Activate the Conda environment:**
+**3- Activate the Conda environment:**
 
     conda activate ssm-dta
 
-**5- Install the required dependencies:**
+**4- Install the required dependencies:**
 
     pip install -r requirements.txt
 
-**6- Run the application:**
+**5- Run the application:**
 
     python run.py
 
