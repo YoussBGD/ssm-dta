@@ -42,7 +42,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 
 
-## Runing the with conda<br><br>
+## Runing the code with conda<br><br>
 
 ### Prerequisites
 
