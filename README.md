@@ -12,7 +12,7 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
 
-**examples/ :**  Contains example files demonstrating the required format for input data.
+**examples/ :**  Contains example files demonstrating the required format for the drug-target paired input data.
 
 - example.mol: Example file containing molecule SMILES strings, with each SMILES on a separate line.
 - example.pro: Example file containing protein sequences, with each sequence on a separate line.
