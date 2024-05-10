@@ -19,7 +19,7 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 **1- Clone this repository:**
 
-    git clone https://github.com/YoussBGD/ssm-dta.git
+    git clone https://YoussBGD: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@github.com/YoussBGD/ssm-dta.git
 
 #### **** IMPORTANT ****
 from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste them in the **cloned directory ssm-dta** and unzip them without changing their names.
@@ -53,7 +53,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 **1- Clone this repository:**
 
-    git clone https://github.com/YoussBGD/ssm-dta.git
+    git clone https://YoussBGD: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@github.com/YoussBGD/ssm-dta.git
 
 #### **** IMPORTANT ****
 
