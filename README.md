@@ -19,7 +19,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
    - ckpt : https://drive.google.com/file/d/1bg2zBfAWx-fct8BRyEqznxqWexlI53-c/view?usp=drive_link<br>
    - fairseq :  https://drive.google.com/file/d/1ImPyGGYzTBIS-iq7Lt2vZCx-PbZeu9nU/view?usp=drive_link<br><br>
 
-## runing the code with docker<br><br>
+## To run the code with docker<br><br>
 
 ### Prerequisites
 
@@ -42,7 +42,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
 
 
-## Runing the code with conda<br><br>
+## To run the code with conda<br><br>
 
 ### Prerequisites
 
