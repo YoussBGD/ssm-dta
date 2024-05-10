@@ -39,7 +39,7 @@ from the links below, donwload the files **fairseq.zip** and **ckpt.zip**, paste
 
     docker run ssm-dta 
 
-#### 5- To access the application, Open a web browser and navigate to the "local link" showed in the terminal.<br><br><br><br>
+#### 5- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal.<br><br><br><br>
 
 
 
