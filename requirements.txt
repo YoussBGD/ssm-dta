@@ -1,4 +1,5 @@
 fastapi==0.111.0
+pubchempy
 nest_asyncio
 hydra-core
 tqdm
