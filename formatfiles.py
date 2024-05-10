@@ -93,7 +93,7 @@ else:
                 is_log = input(f"Are the labels already in -log10({label_unit}/10^9) format? (yes/no): ")
                 
                 # Convert to nM if necessary
-                if label_unit.lower() in ['ki', 'kd', 'ic50']:
+                if label_unit.lower() in ['ki', 'kd', 'ic50'] and is_log.lower() == "no":
                     current_unit = input("What is the current unit of the labels (nM, µM, mM, M)? ")
                     if current_unit.lower() == 'µm':
                         df[label_col] = df[label_col] * 1000  # Convert µM to nM
@@ -113,4 +113,3 @@ else:
 
     else:
         print("\nUnrecognized file type. Please enter 'sdf', 'csv', or 'tsv'.\n")
-
