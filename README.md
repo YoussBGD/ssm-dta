@@ -104,12 +104,12 @@ If you possess SDF files or a CSV file containing CIDs, protein sequences, and a
 
 The SSM-DTA application provides a user-friendly web interface for predicting drug-target binding affinity. Here's a step-by-step guide on how to use the interface:
 
-#### Upload Input Files:
+#### 1- Upload Input Files:
 - Click on the "Browse files" button next to "Upload Molecules File" to select and upload a file containing molecule SMILES strings. (see example.mol)
 - Click on the "Browse files" button next to "Upload Proteins File" to select and upload a file containing protein sequences. (see example.pro).
 - If you want to perform evaluation, click on the "Browse files" button next to "Upload Labels File" to select and upload a file containing binding affinity scores (labels). (see example.label).
 
-#### Select Prediction Mode:
+#### 2- Select Prediction Mode:
 -Choose the desired prediction mode from the "Select Mode" dropdown menu. There are two options:
 - "Prediction": Use this mode if you only want to predict the binding affinity scores for the given molecule-protein pairs.
 - "Evaluation": Use this mode if you have a labels file and want to evaluate the performance of the SSM-DTA model by comparing the predicted scores with the true scores.<br><br>
@@ -117,26 +117,26 @@ The SSM-DTA application provides a user-friendly web interface for predicting dr
 
 - Benchmark : https://drive.google.com/file/d/1Ih2_UATxAkvFskAgCtO90P0Kj_b6S84P/view?usp=drive_link
 
-#### Select Model: 
+#### 3- Select Model: 
 -Choose the appropriate model from the "Model" dropdown menu based on the type of binding affinity scores you want to predict or evaluate. The available options are:
 - "DAVIS": Select this model if your labels are dissociation constant (Kd) values.
 - "KIBA ": Select this model if your labels are KIBA scores (an aggregation of IC50, Ki, and Kd measurements).
 - "BindingDB_IC50": Select this model if your labels are half maximal inhibitory concentration (IC50) values.
 - "BindingDB_Ki": Select this model if your labels are inhibition constant (Ki) values.
 
-#### Specify Output File Name: 
+#### 4- Specify Output File Name: 
 -Enter a name for the output file in the "Output File Name" text input field. This file will contain the predicted binding affinity scores.
 
-#### Adjust Batch Size (Optional): 
+#### 5- Adjust Batch Size (Optional): 
 -If desired, you can change the batch size used for processing the input data. The default value is 1, but you can increase it to process multiple molecule-protein pairs at once. Keep in mind that increasing the batch size may require more memory.
 
-#### Adjust Number of Threads (Optional):
+#### 6- Adjust Number of Threads (Optional):
 -If you want to speed up the processing, you can increase the number of threads used by the application. The default value is 4, but you can adjust it based on the number of CPU cores available on your machine. Note that using too many threads may cause performance issues.
 
-#### Start Processing: 
+#### 7- Start Processing: 
 -Click the "**Process**" button to start the prediction or evaluation process. The application will display a progress message indicating that the processing has begun.
 
-#### View Results: 
+#### 8- View Results: 
 Once the processing is complete, the application will display the results.
 - If you performed prediction, you will see a download link for the output file containing the predicted binding affinity scores and a table showing the predicted scores and the Ki, Kd or IC50 values. Click on the links to download the files. 
 - If you performed evaluation, you will see the evaluation metrics such as MSE, RMSE, Pearson correlation, and C-index. Additionally, you will find a download link for the output file containing the predicted scores and a table comparing the true and predicted scores. 
