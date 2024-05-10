@@ -92,7 +92,7 @@ The scores can be one of the following:
 - Kd values: Dissociation constant, should be in nM and transformed using $-\log_{10}(\frac{Kd}{10^9})$.
 - KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.<br><br><br><br>
 
-
+**** If you have sdf files or a CSV file with CIDs, protein sequences and affinity values, use the **formatfiles.py** code which will guide you and transform your data into the correct format. ****
 
 
 ## C- How to Use the Interface
