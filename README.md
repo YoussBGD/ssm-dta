@@ -95,7 +95,11 @@ The scores can be one of the following:
 If you possess SDF files or a CSV file containing CIDs, protein sequences, and affinity values, you can utilize the formatfiles.py script. This script will interactively guide you through the process and automatically convert your data into the appropriate format using the command provided below.
 
     python formatfiles.py
-
+To run formatfiles.py you need the following libraries 
+- rdkit
+- pandas
+- numpy
+- pubchempy
 
 <br><br><br><br>
 
