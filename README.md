@@ -97,6 +97,8 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
     pip install -r requirements.txt
 
+    pip install build-essential
+
 **5- Run the application:**
 
     python run.py
