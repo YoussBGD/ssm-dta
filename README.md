@@ -1,4 +1,4 @@
-# SSM-DTA: Sequence-based Prediction of Drug-Target Binding Affinity<br><br><br>
+# SSSM DRUG-TARGET Affinity Prediction<br><br><br>
 
 ## Introduction
 
