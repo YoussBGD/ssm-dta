@@ -120,7 +120,7 @@ The SSM-DTA application provides a user-friendly web interface for predicting dr
 - "Evaluation": Use this mode if you have a labels file and want to evaluate the performance of the SSM-DTA model by comparing the predicted scores with the true scores.<br><br>
                 you can download the **Benchmark/** directory from the link below, it contains test sets from DAVIS, KIBA, BindingDB_IC50 and BIndingDB_KI databases, you can use them directly for benchmarking the SSM-DTA model as they are alredy in the good format file.
 
-- Benchmark : https://drive.google.com/file/d/1Ih2_UATxAkvFskAgCtO90P0Kj_b6S84P/view?usp=drive_link
+- Benchmark databases: https://drive.google.com/file/d/1Ih2_UATxAkvFskAgCtO90P0Kj_b6S84P/view?usp=drive_link
 
 #### 3- Select Model: 
 -Choose the appropriate model from the "Model" dropdown menu based on the type of binding affinity scores you want to predict or evaluate. The available options are:
