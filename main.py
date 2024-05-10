@@ -30,7 +30,7 @@ def main(args):
     for command in [canon_command, tokenize_command, add_space_command]:
         print("Executing command:", command)
         if os.system(command) != 0:
-            print("Command failed.")
+            print("Command preprocessing failed, check if your input files are in the required format.")
             return
 
     checkpoint_path = f"./ckpt/{args['model']}/checkpoint_best_20221021.pt"
