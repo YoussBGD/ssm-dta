@@ -110,7 +110,7 @@ The SSM-DTA application provides a user-friendly web interface for predicting dr
 - If you want to perform evaluation, click on the "Browse files" button next to "Upload Labels File" to select and upload a file containing binding affinity scores (labels). (see example.label).
 
 #### Select Prediction Mode:
-Choose the desired prediction mode from the "Select Mode" dropdown menu. There are two options:
+-Choose the desired prediction mode from the "Select Mode" dropdown menu. There are two options:
 - "Prediction": Use this mode if you only want to predict the binding affinity scores for the given molecule-protein pairs.
 - "Evaluation": Use this mode if you have a labels file and want to evaluate the performance of the SSM-DTA model by comparing the predicted scores with the true scores.<br><br>
                 you can download the **Benchmark/** directory from the link below, it contains test sets from DAVIS, KIBA, BindingDB_IC50 and BIndingDB_KI databases, you can use them directly for benchmarking the SSM-DTA model as they are alredy in the good format file.
@@ -118,23 +118,23 @@ Choose the desired prediction mode from the "Select Mode" dropdown menu. There a
 - Benchmark : https://drive.google.com/file/d/1Ih2_UATxAkvFskAgCtO90P0Kj_b6S84P/view?usp=drive_link
 
 #### Select Model: 
-Choose the appropriate model from the "Model" dropdown menu based on the type of binding affinity scores you want to predict or evaluate. The available options are:
+-Choose the appropriate model from the "Model" dropdown menu based on the type of binding affinity scores you want to predict or evaluate. The available options are:
 - "DAVIS": Select this model if your labels are dissociation constant (Kd) values.
 - "KIBA ": Select this model if your labels are KIBA scores (an aggregation of IC50, Ki, and Kd measurements).
 - "BindingDB_IC50": Select this model if your labels are half maximal inhibitory concentration (IC50) values.
 - "BindingDB_Ki": Select this model if your labels are inhibition constant (Ki) values.
 
 #### Specify Output File Name: 
-Enter a name for the output file in the "Output File Name" text input field. This file will contain the predicted binding affinity scores.
+-Enter a name for the output file in the "Output File Name" text input field. This file will contain the predicted binding affinity scores.
 
 #### Adjust Batch Size (Optional): 
-If desired, you can change the batch size used for processing the input data. The default value is 1, but you can increase it to process multiple molecule-protein pairs at once. Keep in mind that increasing the batch size may require more memory.
+-If desired, you can change the batch size used for processing the input data. The default value is 1, but you can increase it to process multiple molecule-protein pairs at once. Keep in mind that increasing the batch size may require more memory.
 
 #### Adjust Number of Threads (Optional):
-If you want to speed up the processing, you can increase the number of threads used by the application. The default value is 4, but you can adjust it based on the number of CPU cores available on your machine. Note that using too many threads may cause performance issues.
+-If you want to speed up the processing, you can increase the number of threads used by the application. The default value is 4, but you can adjust it based on the number of CPU cores available on your machine. Note that using too many threads may cause performance issues.
 
 #### Start Processing: 
-Click the "Process" button to start the prediction or evaluation process. The application will display a progress message indicating that the processing has begun.
+-Click the "**Process**" button to start the prediction or evaluation process. The application will display a progress message indicating that the processing has begun.
 
 #### View Results: 
 Once the processing is complete, the application will display the results.
@@ -146,7 +146,7 @@ That's it! You can repeat the process with different input files or adjust the s
 
 ## D- Overview of the code files 
 
-The SSM-DTA project consists of several Python files that work together to provide the functionality for drug-target binding affinity prediction. Here's an overview of each file:
+-The SSM-DTA project consists of several Python files that work together to provide the functionality for drug-target binding affinity prediction. Here's an overview of each file:
 
 - app.py: This file contains the FastAPI application that defines the API endpoints for processing files and handling file uploads.
 - main.py: This file contains the main script that performs the preprocessing, feature extraction, and affinity prediction using the SSM-DTA model.
