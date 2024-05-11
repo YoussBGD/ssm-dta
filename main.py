@@ -26,9 +26,11 @@ def main(args):
     canon_command = f"python preprocess/canonicalize.py {args['molecules']} --output-fn {args['molecules']}.can --workers 1"
     tokenize_command = f"python preprocess/tokenize_re.py {args['molecules']}.can --output-fn {args['molecules']}.can.re --workers 1"
     add_space_command = f"python preprocess/add_space.py {args['proteins']} --output-fn {args['proteins']}.addspace --workers 1"
-
+    
+    print("\nPreprocessing of the input files\n")
+    
     for command in [canon_command, tokenize_command, add_space_command]:
-        print("Executing command:", command)
+        
         if os.system(command) != 0:
             print("Command preprocessing failed, check if your input files are in the required format.")
             return
@@ -119,4 +121,3 @@ def main(args):
     results["output_file"] = output_file
 
     return results
-
