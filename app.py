@@ -25,21 +25,5 @@ async def process_files(input_data: InputData):
     results = script.main(args)
     return {"results": results}
 
-@app.post("/upload_molecules")
-async def upload_molecules(file: UploadFile = File(...)):
-    with open(file.filename, "wb") as f:
-        f.write(await file.read())
-    return {"message": f"Molecules file {file.filename} uploaded successfully"}
 
-@app.post("/upload_proteins")
-async def upload_proteins(file: UploadFile = File(...)):
-    with open(file.filename, "wb") as f:
-        f.write(await file.read())
-    return {"message": f"Proteins file {file.filename} uploaded successfully"}
-
-@app.post("/upload_labels")
-async def upload_labels(file: UploadFile = File(...)):
-    with open(file.filename, "wb") as f:
-        f.write(await file.read())
-    return {"message": f"Labels file {file.filename} uploaded successfully"}
 
