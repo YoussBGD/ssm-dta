@@ -8,7 +8,7 @@ The provided code launches a user-friendly graphical interface built using **Str
 The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 
-## A- Input Files Format ( **** IMPORTANT ****) read this efore using the application
+## A- Input Files Format ( **** IMPORTANT ****) read this before using the application
 
 To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
 
