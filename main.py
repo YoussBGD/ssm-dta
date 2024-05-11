@@ -11,6 +11,31 @@ from fairseq.models.roberta import RobertaModel
 from torch.nn.utils.rnn import pad_sequence
 import torch
 import base64
+from preprocessing.canonicalize import canonicalize
+from preprocessing.tokenize_re import smi_tokenizer
+from preprocessing.add_space import addspace
+
+def preprocess_molecules(molecules_fn, output_fn, keep_atommap=False):
+    with open(molecules_fn, 'r') as f, open(output_fn, 'w') as out:
+        for line in f:
+            smiles = line.strip()
+            canonical_smiles = canonicalize(smiles, keep_atommap)
+            if canonical_smiles is not None:
+                out.write(f'{canonical_smiles}\n')
+
+def preprocess_proteins(proteins_fn, output_fn):
+    with open(proteins_fn, 'r') as f, open(output_fn, 'w') as out:
+        for line in f:
+            pro = line.strip()
+            spaced_pro = addspace(pro)
+            out.write(f'{spaced_pro}\n')
+
+def preprocess_tokenize_re(molecules_fn, output_fn):
+    with open(molecules_fn, 'r') as f, open(output_fn, 'w') as out:
+        for line in f:
+            smi = line.strip()
+            tokenized_smi = smi_tokenizer(smi)
+            out.write(f'{tokenized_smi}\n')
 
 def main(args):
     num_threads = args.get("num_threads")
@@ -23,20 +48,25 @@ def main(args):
         stream=sys.stdout,
     )
 
-    canon_command = f"python preprocess/canonicalize.py {args['molecules']} --output-fn {args['molecules']}.can --workers 1"
-    tokenize_command = f"python preprocess/tokenize_re.py {args['molecules']}.can --output-fn {args['molecules']}.can.re --workers 1"
-    add_space_command = f"python preprocess/add_space.py {args['proteins']} --output-fn {args['proteins']}.addspace --workers 1"
+    print("\nSTART preprocessing of the input files\n")
     
-    print("\nPreprocessing of the input files\n")
+    # As this code can use extremely large files, i write them on the disk to optimize memory usage
 
-    for command in [canon_command, tokenize_command, add_space_command]:
-        if os.system(command) != 0:
-            print("Command preprocessing failed, check if your input files are in the required format.")
-            return
-    #free up storage space on the server used
-    os.system(f"rm {args['molecules']}")
-    os.system(f"rm {args['molecules']}.can")
-    os.system(f"rm {args['proteins']}")
+    preprocess_molecules(args['molecules'], f"{args['molecules']}.can")
+    os.system(f"rm {args['molecules']}")#free up storage space on the server used
+    
+    preprocess_tokenize_re(f"{args['molecules']}.can", f"{args['molecules']}.can.re")
+    os.system(f"rm {args['molecules']}.can")#free up storage space on the server used
+    
+    preprocess_proteins(args['proteins'], f"{args['proteins']}.addspace")
+    os.system(f"rm {args['proteins']}")#free up storage space on the server used
+    
+    print("..........")
+    print("\nEND Preprocessing of the input files\n\n")
+    print("\nProcessing SSM-DTA ... \n")
+    
+    
+    
 
     checkpoint_path = f"./ckpt/{args['model']}/checkpoint_best_20221021.pt"
 
