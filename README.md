@@ -10,7 +10,7 @@ The backend of the application is powered by **FastAPI**.<br><br><br><br><br>
 
 ## A- Input Files Format ( **** IMPORTANT ****) read this before using the application
 
-To use the SSM-DTA model, the input files must follow the required format as the Examples files in examples repository.
+To use the SSM-DTA model, the input files must follow the required format as the examples files in **Examples** repository.
 
 **examples/ :**  Contains example files demonstrating the required format for the drug-target paired input data.
 
