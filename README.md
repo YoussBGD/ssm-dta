@@ -71,7 +71,7 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
     docker run ssm-dta 
 
-**4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal**.<br><br><br><br>  
+**4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal after running the Docker container**.<br><br><br><br>  
 
 
 ### To run the code with conda<br><br>
