@@ -23,10 +23,10 @@ To use the SSM-DTA model, the input files must follow the required format as the
 
 The scores in the label file can be one of the following:
 
-- KI values: Inhibition constant, should be in nM and transformed using $-\log_{10}(\frac{Ki}{10^9})$.
-- IC50 values: Half maximal inhibitory concentration, should be in nM and transformed using $-\log_{10}(\frac{IC50}{10^9})$.
-- Kd values: Dissociation constant, should be in nM and transformed using $-\log_{10}(\frac{Kd}{10^9})$.
-- KIBA scores: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.
+- **KI values**: Inhibition constant, should be in **nM** and transformed using **$-\log_{10}(\frac{Ki}{10^9})$**.
+- **IC50 values**: Half maximal inhibitory concentration, should be in **nM** and transformed using **$-\log_{10}(\frac{IC50}{10^9})$**.
+- **Kd values**: Dissociation constant, should be in **nM** and transformed using **$-\log_{10}(\frac{Kd}{10^9})$**.
+- **KIBA scores**: An aggregation of IC50, Ki, and Kd measurements. KIBA scores should remain as they are and do not require any transformation.
 
 If you possess SDF files or a CSV file containing CIDs, protein sequences, and affinity values, you can utilize the **formatfiles.py** script. This script will interactively guide you through the process and automatically convert your data into the appropriate format using the command provided below.
 
