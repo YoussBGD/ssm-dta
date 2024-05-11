@@ -21,7 +21,7 @@ To use the SSM-DTA model, the input files must follow the required format as the
     
 **Labels file :**  The labels file is mandatory for evaluation mode. In prediction mode, only the molecule and protein files are required.
 
-The scores can be one of the following:
+The scores in the label file can be one of the following:
 
 - KI values: Inhibition constant, should be in nM and transformed using $-\log_{10}(\frac{Ki}{10^9})$.
 - IC50 values: Half maximal inhibitory concentration, should be in nM and transformed using $-\log_{10}(\frac{IC50}{10^9})$.
