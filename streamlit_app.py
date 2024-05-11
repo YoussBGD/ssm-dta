@@ -18,6 +18,8 @@ molecules_file = st.file_uploader("Upload Molecules File")
 proteins_file = st.file_uploader("Upload Proteins File")
 labels_file = st.file_uploader("Upload Labels File (required for Evaluation)")
 
+
+
 if molecules_file:
     molecules_path = os.path.join(current_dir, molecules_file.name)
     with open(molecules_path, "wb") as f:
@@ -52,7 +54,7 @@ selected_model_option = st.selectbox("Model", model_options)
 model = selected_model_option.split(" - ")[0]
 
 output_fn = st.text_input("Output File Name (required)")
-batch_size = st.number_input("Batch Size", value=1, min_value=1, step=1)
+batch_size = 1
 num_threads = st.number_input("Number of Threads (increasing this may speed up processing)", value=4, min_value=1, max_value=16, step=1,
                               help="Recommended: Use a number of threads equal to or slightly higher than the number of CPU cores available on your machine. Using too many threads may cause performance issues.")
 
