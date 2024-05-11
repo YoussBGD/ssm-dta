@@ -13,7 +13,7 @@ import torch
 import base64
 
 def main(args):
-    num_threads = args.get("num_threads", 4)
+    num_threads = args.get("num_threads")
     torch.set_num_threads(num_threads)
 
     logging.basicConfig(
@@ -28,9 +28,8 @@ def main(args):
     add_space_command = f"python preprocess/add_space.py {args['proteins']} --output-fn {args['proteins']}.addspace --workers 1"
     
     print("\nPreprocessing of the input files\n")
-    
+
     for command in [canon_command, tokenize_command, add_space_command]:
-        
         if os.system(command) != 0:
             print("Command preprocessing failed, check if your input files are in the required format.")
             return
@@ -119,5 +118,16 @@ def main(args):
         output_file = base64.b64encode(f.read()).decode("utf-8")
     
     results["output_file"] = output_file
+    
+    
+    #free up storage space on the server used
+    os.system(f"rm {args['molecules']}")
+    os.system(f"rm {args['molecules']}.can")
+    os.system(f"rm {args['molecules']}.can.re")
+    os.system(f"rm {args['proteins']}")
+    os.system(f"rm {args['proteins']}.addspace")
+    if args["labels"] is not None:
+        os.system(f"rm {args['labels']}")
+    
 
     return results
