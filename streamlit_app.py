@@ -8,7 +8,7 @@ import pandas as pd
 import os
 
 
-nest_asyncio.apply()
+#nest_asyncio.apply()
 
 st.title("SSM DRUG-TARGET Affinity Prediction")
 
