@@ -33,6 +33,10 @@ def main(args):
         if os.system(command) != 0:
             print("Command preprocessing failed, check if your input files are in the required format.")
             return
+    #free up storage space on the server used
+    os.system(f"rm {args['molecules']}")
+    os.system(f"rm {args['molecules']}.can")
+    os.system(f"rm {args['proteins']}")
 
     checkpoint_path = f"./ckpt/{args['model']}/checkpoint_best_20221021.pt"
 
@@ -121,10 +125,7 @@ def main(args):
     
     
     #free up storage space on the server used
-    os.system(f"rm {args['molecules']}")
-    os.system(f"rm {args['molecules']}.can")
     os.system(f"rm {args['molecules']}.can.re")
-    os.system(f"rm {args['proteins']}")
     os.system(f"rm {args['proteins']}.addspace")
     if args["labels"] is not None:
         os.system(f"rm {args['labels']}")
