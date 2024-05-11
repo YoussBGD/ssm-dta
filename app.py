@@ -18,10 +18,6 @@ class InputData(BaseModel):
 @app.post("/process")
 async def process_files(input_data: InputData):
     args = input_data.dict()
-    
-    if args["mode"] == "Evaluation" and args["labels"] is None:
-        raise HTTPException(status_code=400, detail="Labels file is required for evaluation mode.")
-    
     results = script.main(args)
     return {"results": results}
 
