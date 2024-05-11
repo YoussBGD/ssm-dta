@@ -53,13 +53,13 @@ def main(args):
     # As this code can use extremely large files, i write them on the disk to optimize memory usage
 
     preprocess_molecules(args['molecules'], f"{args['molecules']}.can")
-    os.system(f"rm {args['molecules']}")#free up storage space on the server used
+    os.remove(f"{args['molecules']}")#free up storage space on the server used
     
     preprocess_tokenize_re(f"{args['molecules']}.can", f"{args['molecules']}.can.re")
-    os.system(f"rm {args['molecules']}.can")#free up storage space on the server used
+    os.remove(f"{args['molecules']}.can")#free up storage space on the server used
     
     preprocess_proteins(args['proteins'], f"{args['proteins']}.addspace")
-    os.system(f"rm {args['proteins']}")#free up storage space on the server used
+    os.remove(f"{args['proteins']}")#free up storage space on the server used
     
     print("..........")
     print("\nEND Preprocessing of the input files\n\n")
@@ -155,10 +155,10 @@ def main(args):
     
     
     #free up storage space on the server used
-    os.system(f"rm {args['molecules']}.can.re")
-    os.system(f"rm {args['proteins']}.addspace")
+    os.remove(f"{args['molecules']}.can.re")
+    os.remove(f"{args['proteins']}.addspace")
     if args["labels"] is not None:
-        os.system(f"rm {args['labels']}")
+        os.remove(f"{args['labels']}")
     
 
     return results
