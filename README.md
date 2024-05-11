@@ -1,4 +1,4 @@
-# SSM DRUG-TARGET Affinity Prediction<br><br><br>
+# SSM DRUG-TARGET Affinity Prediction APP<br><br><br>
 
 ## Introduction
 
