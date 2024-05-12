@@ -71,6 +71,10 @@ from the links below, donwload the repertories **fairseq.zip** and **ckpt.zip**,
 
     docker run ssm-dta 
 
+**- Or run the Docker container with more CPUs to increase the power.**
+
+    docker run --cpus {CPUs number} ssm-dta
+
 **4- To access the application, Open a web browser and navigate to the "Network URL" showed in the terminal after running the Docker container**.<br><br><br><br>  
 
 
