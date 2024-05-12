@@ -76,7 +76,8 @@ def main(args):
         data_name_or_path="dict",
     )
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
     roberta.to(device)
     roberta.eval()
 
