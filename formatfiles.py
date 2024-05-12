@@ -90,7 +90,7 @@ else:
                 print(f"\nLabels have been written to the file {output_file}.\n")
             else:
                 # For Ki, Kd, IC50, check if they are in -log format
-                is_log = input(f"Are the labels already in -log10({label_unit}/10^9) format? (yes/no): ")
+                is_log = input(f"Are the labels already in -log10({label_unit} (nM)/10^9) format? (yes/no): ")
                 
                 # Convert to nM if necessary
                 if label_unit.lower() in ['ki', 'kd', 'ic50'] and is_log.lower() == "no":
